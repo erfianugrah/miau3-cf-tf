@@ -11,7 +11,7 @@ resource "cloudflare_split_tunnel" "default_include" {
     description = "Local"
   }
   tunnels {
-    address     = "172.18.1.1/24"
+    address     = "172.18.1.0/24"
     description = "docker-arch2-httpbun"
   }
   tunnels {
@@ -37,7 +37,7 @@ resource "cloudflare_split_tunnel" "google_include" {
     description = "Local"
   }
   tunnels {
-    address     = "172.18.1.1/24"
+    address     = "172.18.1.0/24"
     description = "docker-arch2-httpbun"
   }
   tunnels {
