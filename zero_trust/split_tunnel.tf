@@ -14,6 +14,10 @@ resource "cloudflare_split_tunnel" "default_include" {
     address     = "10.68.73.2"
     description = "pve"
   }
+  tunnels {
+    address     = "172.18.0.2"
+    description = "pihole"
+  }
   # tunnels {
   #   address     = "10.68.0.0/16"
   #   description = "Home"
@@ -51,6 +55,10 @@ resource "cloudflare_split_tunnel" "google_include" {
   tunnels {
     address     = "10.68.73.2"
     description = "pve"
+  }
+  tunnels {
+    address     = "172.18.0.2"
+    description = "pihole"
   }
   # tunnels {
   #   address     = "10.68.0.0/16"
